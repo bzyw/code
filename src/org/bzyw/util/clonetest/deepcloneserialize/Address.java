@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by bzyw on 2018/5/4.
  */
 public class Address implements Serializable {
-    static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     private String country;
     private String city;
 

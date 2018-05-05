@@ -6,7 +6,7 @@ import java.io.*;
  * Created by bzyw on 2018/5/4.
  */
 public class User implements Cloneable, Serializable {
-    static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     private String name;
     private Address address;
 
