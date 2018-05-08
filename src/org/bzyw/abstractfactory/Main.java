@@ -10,14 +10,15 @@ import org.bzyw.abstractfactory.factory.Tray;
  */
 public class Main {
     public static void main(String[] args) {
-        String classname = "org.bzyw.abstractfactory.listfactory.ListFactory";
+        //String classname = "org.bzyw.abstractfactory.listfactory.ListFactory";
+        String classname = "org.bzyw.abstractfactory.tablefactory.TableFactory";
         Factory factory = Factory.getFactory(classname);
 
-        Link asahi = factory.createLink("朝日新闻", "www.asahi.com");
-        Link yomiuri = factory.createLink("读者新闻", "www.yomiuri.co.jp");
-        Link us_yahoo = factory.createLink("Yahoo!", "www.yahoo.com");
-        Link jp_yahoo = factory.createLink("Yahoo!Japan", "www.yahoo.co.jp");
-        Link google = factory.createLink("Google", "www.google.com");
+        Link asahi = factory.createLink("朝日新闻", "http://www.asahi.com");
+        Link yomiuri = factory.createLink("读者新闻", "http://www.yomiuri.co.jp");
+        Link us_yahoo = factory.createLink("Yahoo!", "http://www.yahoo.com");
+        Link jp_yahoo = factory.createLink("Yahoo!Japan", "http://www.yahoo.co.jp");
+        Link google = factory.createLink("Google", "http://www.google.com");
 
         Tray traynews = factory.createTray("新闻");
         traynews.add(asahi);
