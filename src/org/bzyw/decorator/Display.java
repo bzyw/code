@@ -12,8 +12,9 @@ public abstract class Display {
 
     public final void show() {
         int rows = getRows();
-        for (int i = 0; i < rows; i++) {
-            System.out.println(getRowText(i));
+        for (int i = 1; i <= rows; i++) {
+            String rowText = getRowText(i);
+            System.out.println(rowText);
         }
     }
 }
