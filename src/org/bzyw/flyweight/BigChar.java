@@ -19,20 +19,28 @@ public class BigChar {
     private void init(char charname) {
         this.charname = charname;
         String fileName = "big" + charname + ".txt";
+        BufferedReader reader = null;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            reader = new BufferedReader(new FileReader(fileName));
             StringBuilder builder = new StringBuilder();
             String line = null;
             while ((line = reader.readLine()) != null) {
                 builder.append(line);
                 builder.append("\n");
             }
-            reader.close();
             text = builder.toString();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (null != reader) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

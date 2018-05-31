@@ -4,6 +4,9 @@ package org.bzyw.mediator;
  * Created by bzyw on 2018/5/19.
  */
 public interface Mediator {
+    /**
+     * 产生所有同事
+     */
     public abstract void createColleagues();
 
     /**

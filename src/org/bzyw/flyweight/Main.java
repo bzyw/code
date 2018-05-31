@@ -5,7 +5,7 @@ package org.bzyw.flyweight;
  */
 public class Main {
     public static void main(String[] args) {
-        String phoneNumber = "021-5527012";
+        String phoneNumber = "0818-5527012";
         BigString bigString = new BigString(phoneNumber);
         bigString.print();
     }
